@@ -307,182 +307,95 @@ Después de configurar el entorno, comprobamos que podemos compilar y cargar un 
 
 
 # A1
-## Blink + Semáforo
 
-### 1.1. Introducción
+# A1 — BLINK Y SEMÁFORO
 
-## 1.2. Capítulo 0 — Blink
-
-### Objetivo
-
-### Conceptos fundamentales
-
-
-### Procedimiento
-
-
-### Evidencias
-
-
-## 1.3. Práctica 1 — LED externo
-
-### Objetivo
-
-
-### Materiales
-
-- Placa ESP32.
-- GPIO Extension Board.
-- Protoboard.
-- LED.
-- Resistencia de 220 Ω.
-- Cables jumper.
-
-### Conceptos
-
-**GPIO:** pin de entrada o salida que permite controlar dispositivos electrónicos.
-
-**GND:** referencia de 0 voltios que permite cerrar el circuito eléctrico.
-
-**Resistencia:** componente que limita la corriente para proteger el LED.
-
-**Protoboard:** placa que permite realizar conexiones eléctricas sin necesidad de soldar.
-
-### Procedimiento
-
-1. Desconectar el ESP32 de la alimentación.
-2. Identificar las patas del LED.
-3. Introducir el LED en la protoboard.
-4. Colocar la resistencia de 220 Ω.
-5. Conectar el pin GPIO correspondiente.
-6. Conectar GND.
-7. Revisar las conexiones.
-8. Conectar el USB y cargar el programa Blink.
-9. Comprobar el funcionamiento.
-
-### Evidencias
-
-Pendiente de añadir el esquema, fotografías y resultados.
+**Actividad:** M12UF1A1
+**Módulo:** Arduino
+**Curso:** SMX2
 
 ---
 
-## 1.4. Práctica 2 — Semáforo
+# 1. Capítulo 0 — Blink
 
-### Objetivo
+## 1.1. Objetivo
 
-Construir un semáforo utilizando tres LED que se enciendan de forma secuencial, sin encenderse simultáneamente.
+## 1.2. Lista de componentes
 
-### Materiales
+## 1.3. Configuración de Arduino IDE
 
-| Componente | Cantidad |
-|---|---|
-| ESP32-WROVER | 1 |
-| GPIO Extension Board | 1 |
-| Protoboard | 1 |
-| LED rojo | 1 |
-| LED verde | 1 |
-| LED azul (prueba provisional) | 1 |
-| Resistencias de 220 Ω | 3 |
-| Cables jumper | Según las conexiones |
+### 1.3.1. Selección del modo de carga
 
-**Nota:** Para la entrega definitiva, el LED azul debe sustituirse por uno amarillo, tal como indica el enunciado.
+### 1.3.2. Selección del puerto serie
 
-### 1.4.1. Conexiones del circuito
+### 1.3.3. Compilación y carga del programa
 
-| Conexión | Rojo | Azul | Verde |
-|---|---|---|---|
-| Pata larga (+) | J40 | J45 | J50 |
-| Pata corta (−) | J41 | J46 | J51 |
-| Resistencia de 220 Ω | F40–F43 | F45–F48 | F50–F53 |
-| GPIO — extremo protoboard | G43 | G48 | G53 |
-| GPIO — extremo ESP32 | GPIO2 | GPIO13 | GPIO14 |
-| GND — extremo protoboard | G41 | G46 | G51 |
-| GND — extremo ESP32 | GND | GND | GND |
+## 1.4. Control y solución de incidencias técnicas
 
-Estas son las conexiones finales planificadas y comprobadas mediante el funcionamiento del montaje.
+## 1.5. Preguntas
 
-### 1.4.2. Funcionamiento del semáforo
+### 1.5.1. Información sobre el LED azul que parpadea
 
-El programa utiliza tres salidas digitales para controlar cada LED.
+### 1.5.2. ¿Qué son void setup() y void loop()?
 
-| Orden | LED | GPIO | Duración |
-|---|---|---|---|
-| 1 | Rojo | GPIO2 | 3 segundos |
-| 2 | Azul | GPIO13 | 3 segundos |
-| 3 | Verde | GPIO14 | 1 segundo |
+### 1.5.3. ¿Qué significa la línea #define LED_BUITIN 2?
 
-Cuando termina la secuencia, el programa vuelve a comenzar automáticamente.
+### 1.5.4. ¿Qué significa la línea delay(1000);?
 
-### 1.4.3. Código Arduino
+### 1.5.5. Funciones utilizadas en el script
 
-El programa utiliza tres constantes:
+---
 
-- `LED_ROJO = 2`
-- `LED_AZUL = 13`
-- `LED_VERDE = 14`
+# 2. Práctica 1 — LED
 
-En `setup()` se configuran los tres pines como salidas.
+## 2.1. Objetivo
 
-En `loop()` se enciende cada LED durante el tiempo establecido y se apagan los demás para evitar que funcionen simultáneamente.
+## 2.2. Componentes necesarios
 
-**Archivo de código:** Pendiente de subir `Semaforo.ino`.
+## 2.3. Diseño del circuito
 
-### 1.4.4. Compilación y carga
+## 2.4. Montaje en la protoboard
 
-**Procedimiento:**
+## 2.5. Código Blink
 
-1. Abrir Arduino IDE.
-2. Escribir el programa.
-3. Seleccionar `ESP32 Wrover Module`.
-4. Seleccionar el puerto COM correspondiente.
-5. Pulsar `Verify`.
-6. Comprobar que no existen errores.
-7. Pulsar `Upload`.
-8. Esperar a que finalice la transferencia.
-9. Observar el funcionamiento de los LED.
+## 2.6. Preguntas
 
-### 1.4.5. Resultado
+### 2.6.1. ¿Qué ocurre al conectar el jumper del pin 2 a 5V? ¿El LED parpadea?
 
-La placa ESP32 ejecuta correctamente el programa y los tres LED utilizados en la prueba se encienden de forma secuencial.
+### 2.6.2. ¿Qué ocurre al conectar los jumpers a los polos negativo y positivo de la pila? ¿El LED parpadea?
 
-**Estado:** Programación y montaje provisional comprobados.
+## 2.7. Evidencias del montaje
 
-### 1.4.6. Evidencias de la práctica
+---
 
-Pendiente de adjuntar:
+# 3. Práctica 2 — Semáforo
 
-- Fotografía del circuito.
-- Captura del código.
-- Captura de compilación correcta.
-- Captura de subida correcta.
-- Diagrama de Draw.io.
-- Vídeo personal del funcionamiento.
+## 3.1. Objetivo
 
-### 1.4.7. Incidencias encontradas
+## 3.2. Componentes necesarios
 
-**Incidencia 1 — Selección incorrecta de placa**
+## 3.3. Diseño del circuito en Draw.io
 
-Inicialmente se utilizó la configuración ESP32S3 Dev Module, pero la placa física correspondía a ESP32-WROVER.
+## 3.4. Conexiones de la protoboard
 
-**Solución:** seleccionar ESP32 Wrover Module en Arduino IDE.
+## 3.5. Código Arduino del semáforo
 
-**Incidencia 2 — Error de compilación**
+## 3.6. Montaje del circuito
 
-El programa mostraba el error `LED_AZUL was not declared in this scope`.
+## 3.7. Comprobación del funcionamiento
 
-**Solución:** corregir el identificador utilizado en el código para que coincidiera con el definido al principio del programa.
+## 3.8. Vídeo personal de la práctica
 
-**Incidencia 3 — LED sin funcionamiento**
+## 3.9. Evidencias
 
-Se revisaron las conexiones de la protoboard, las filas eléctricas, los cables GPIO y las conexiones GND.
+---
 
-**Solución:** corregir las posiciones de los cables y comprobar el funcionamiento de los tres LED.
+# 4. Webgrafía
 
-### 1.4.8. Conclusión
+---
 
-Con esta práctica he aprendido a conectar varios LED a un ESP32, utilizar pines GPIO diferentes y crear una secuencia automática mediante programación.
+[Volver al índice principal](../README.md)
 
-También he comprendido mejor cómo se organizan las conexiones internas de la protoboard y cómo detectar errores eléctricos y de programación.
 
 [Volver al índice](#2-índice-general)
 
