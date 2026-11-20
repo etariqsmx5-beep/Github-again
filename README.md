@@ -54,34 +54,39 @@ En cada actividad se documentarán:
 
 ### [Bibliografía y recursos](#bibliografia)
 
----
 
-# A0
+# A0 — PREPARACIÓN DEL ENTORNO
+
+**Actividad:** M12UF1A0  
+**Curso:** SMX2  
+**Módulo:** Arduino
+
+
 # 2. Investigación sobre Arduino
 
 ## 2.1. ¿Qué es Arduino?
 
-Es una plataforma de creación de código abierto que permite crear
-diferentes tipos de microordenadores de una sola placa base. Está basada
-en hardware y software libre y fácil de usar para los creadores y
-desarrolladores. Hay muchos dispositivos que se pueden conectar a
-Arduino incluye sensores, luces, actuadores, plantillas y altavoces y otros
-más.
+Es una plataforma de creación de código abierto que permite crear diferentes tipos de microordenadores de una sola placa base. Está basada en hardware y software libre y fácil de usar para los creadores y desarrolladores.
+
+Hay muchos dispositivos que se pueden conectar a Arduino, incluidos sensores, luces, actuadores, pantallas, altavoces y otros componentes.
 
 ## 2.2. ¿Cuáles son sus características más importantes?
 
 Las características más importantes de Arduino son:
 
 - **Fácil de programar:** Arduino utiliza un entorno de programación llamado Arduino IDE, que funciona en Windows, macOS y Linux.
+
 - **Hardware y software libre:** Sus diseños y herramientas son de código abierto, lo que permite estudiar, modificar y compartir proyectos.
+
 - **Microcontrolador:** Es el componente principal de la placa y se encarga de ejecutar las instrucciones del programa. El tipo de microcontrolador depende del modelo de Arduino.
+
 - **Pines de entrada y salida:** Permiten conectar sensores, botones, luces y motores. Dispone de pines digitales y entradas analógicas.
+
 - **Alimentación:** Algunas placas, como Arduino UNO R3, pueden funcionar mediante USB de 5 V o una fuente externa recomendada de 7 a 12 V.
+
 - **Versatilidad:** Se puede utilizar para crear muchos proyectos diferentes, como robots, alarmas o sistemas de iluminación automática.
 
-## 2.3. Origen de Arduino
-
-#. ¿Cuál es el origen de Arduino?
+## 2.3. ¿Cuál es el origen de Arduino?
 
 Arduino nació en el año 2005 en el Instituto de Diseño Interactivo de Ivrea, en Italia.
 
@@ -89,11 +94,13 @@ Este proyecto surgió porque los estudiantes necesitaban una herramienta económ
 
 Con el tiempo, Arduino se hizo muy popular y empezó a utilizarse en escuelas, universidades y proyectos de robótica.
 
-## 2.4. Modelos de Arduino
-
 ## 2.4. ¿Qué modelos de Arduino hay?
 
-Los modelos más conocidos de Arduino son Arduino UNO R3, Arduino Mega 2560 y Arduino Leonardo. Cada modelo tiene diferentes características, como el número de pines, la memoria y el microcontrolador que utiliza.
+Los modelos más conocidos de Arduino son Arduino UNO R3, Arduino Mega 2560 y Arduino Leonardo.
+
+Cada modelo tiene diferentes características, como el número de pines, la memoria y el microcontrolador que utiliza.
+
+### Tabla comparativa de modelos Arduino
 
 | Características | Arduino UNO R3 | Arduino Mega 2560 | Arduino Leonardo |
 |---|---|---|---|
@@ -106,17 +113,20 @@ Los modelos más conocidos de Arduino son Arduino UNO R3, Arduino Mega 2560 y Ar
 | Memoria SRAM | 2 KB | 8 KB | 2,5 KB |
 | Reloj | 16 MHz | 16 MHz | 16 MHz |
 
-
 ## 2.5. ¿Para qué sirve Arduino?
 
 Arduino sirve para crear proyectos electrónicos y controlar diferentes dispositivos mediante programación.
 
-Gracias a los **sensores**, puede recibir información del entorno, como la temperatura, la luz o el movimiento. Después, el **microcontrolador** procesa esa información y, mediante los **actuadores**, puede realizar acciones, como encender una luz o mover un motor.
+Gracias a los **sensores**, puede recibir información del entorno, como la temperatura, la luz o el movimiento.
+
+Después, el **microcontrolador** procesa esa información y, mediante los **actuadores**, puede realizar acciones, como encender una luz o mover un motor.
 
 Arduino se utiliza en diferentes ámbitos:
 
 - **Proyectos personales:** creación de robots, luces decorativas y sistemas de automatización.
+
 - **Educación y prototipos:** permite aprender programación y electrónica y probar nuevas ideas.
+
 - **Industria y negocios:** se utiliza para desarrollar prototipos de sistemas de control, monitorizar procesos y recoger datos mediante sensores.
 
 **Ejemplo:** Arduino puede detectar cuando una habitación está oscura y encender automáticamente una luz.
@@ -129,85 +139,198 @@ Este lenguaje permite escribir instrucciones para controlar sensores, luces, mot
 
 ## 2.7. ¿Qué es Arduino IDE?
 
-Arduino IDE (Entorno de Desarrollo Integrado) es un software gratuito y de código abierto que permite escribir, compilar y cargar programas en las placas Arduino. También ofrece herramientas para detectar errores y depurar programas compatibles.
+Arduino IDE (Entorno de Desarrollo Integrado) es un software gratuito y de código abierto que permite escribir, compilar y cargar programas en las placas Arduino.
+
+También ofrece herramientas para detectar errores y depurar programas compatibles.
 
 Está compuesto por diferentes herramientas:
 
 - **Editor de código:** permite escribir y modificar el código fuente.
+
 - **Compilador:** convierte el código escrito en C/C++ en instrucciones que puede ejecutar el microcontrolador.
+
 - **Herramienta de carga:** permite enviar el programa compilado a la placa Arduino mediante USB.
+
 - **Depurador:** ayuda a detectar y corregir errores durante la ejecución, en placas compatibles.
 
 Arduino IDE es compatible con Windows, macOS y Linux.
+
+---
+
+# 3. Instalación de Arduino IDE
+
+## 3.1. Descarga de Arduino IDE
+
+Para instalar Arduino IDE debemos acceder a la página oficial:
+
+**Enlace:** https://www.arduino.cc/en/software
+
+Desde esta página podemos descargar la versión correspondiente a nuestro sistema operativo.
+
+## 3.2. Instalación en el equipo
+
+Según el enunciado, Arduino IDE debe instalarse en la partición **D:** del equipo del aula.
+
+### Procedimiento
+
+1. Accedemos a la página oficial de Arduino.
+2. Seleccionamos la versión para Windows.
+3. Descargamos el instalador.
+4. Ejecutamos el archivo descargado.
+5. Seleccionamos la partición D: como destino de instalación, cuando el instalador lo permita.
+6. Completamos la instalación.
+7. Abrimos Arduino IDE para comprobar que funciona correctamente.
+
+**Versión utilizada durante las prácticas:** Arduino IDE 2.3.11.
+
+### Evidencias de instalación
+
+**Captura 01 — Instalación de Arduino IDE**
+
+*Pendiente de insertar la captura.*
+
+**Captura 02 — Arduino IDE abierto**
+
+*Pendiente de insertar la captura.*
+
+---
+
+# 4. Puesta a punto de Arduino IDE
+
+## 4.1. Comprobación del controlador CH343
+
+El controlador CH343 permite la comunicación USB serie con la placa ESP32-S3 WROOM descrita en el manual de referencia.
+
+### Procedimiento
+
+1. Conectamos la placa al ordenador mediante el cable USB.
+2. Abrimos el Administrador de dispositivos de Windows.
+3. Buscamos el apartado **Puertos (COM y LPT)**.
+4. Comprobamos si aparece el dispositivo USB serie correspondiente.
+5. Si el controlador no está instalado correctamente, seguimos el procedimiento del manual Freenove para instalarlo.
+
+**Referencia:** Manual Freenove, apartado CH343.
+
+### Evidencia
+
+**Captura 03 — Comprobación del controlador USB**
+
+*Pendiente de insertar la captura.*
+
+## 4.2. Configuración del entorno de Arduino
+
+Para utilizar la placa ESP32 debemos instalar el soporte correspondiente en Arduino IDE.
+
+### Procedimiento
+
+1. Abrimos Arduino IDE.
+2. Seleccionamos `File > Preferences`.
+3. Buscamos la opción `Additional Boards Manager URLs`.
+4. Añadimos la URL del paquete ESP32:
+
+`https://espressif.github.io/arduino-esp32/package_esp32_index.json`
+
+5. Guardamos los cambios.
+6. Abrimos `Boards Manager`.
+7. Buscamos `esp32`.
+8. Instalamos `esp32 by Espressif Systems`.
+9. Comprobamos que aparece como instalado.
+
+### Evidencia
+
+**Captura 04 — Instalación del paquete ESP32**
+
+*Pendiente de insertar la captura.*
+
+## 4.3. Selección de la placa ESP32
+
+Después de instalar el paquete, debemos seleccionar el modelo de placa que utilizamos.
+
+### Procedimiento
+
+1. Conectamos la placa al ordenador.
+2. Abrimos Arduino IDE.
+3. Entramos en `Tools > Board`.
+4. Seleccionamos el modelo correspondiente.
+
+**Placa utilizada en nuestro montaje:** Freenove ESP32-WROVER.
+
+**Modelo seleccionado:** `ESP32 Wrover Module`.
+
+### Evidencia
+
+**Captura 05 — Selección de ESP32 Wrover Module**
+
+*Pendiente de insertar la captura.*
+
+## 4.4. Comprobación del puerto USB
+
+Para comprobar que Arduino IDE reconoce la placa:
+
+### Procedimiento
+
+1. Conectamos el ESP32 al ordenador con el cable USB.
+2. Entramos en `Tools > Port`.
+3. Seleccionamos el puerto COM correspondiente.
+4. Comprobamos que Arduino IDE reconoce la placa.
+
+Durante nuestras pruebas utilizamos el puerto **COM3**.
+
+### Evidencia
+
+**Captura 06 — Selección del puerto COM3**
+
+*Pendiente de insertar la captura.*
+
+## 4.5. Verificación del funcionamiento
+
+Después de configurar el entorno, comprobamos que podemos compilar y cargar un programa en el ESP32.
+
+### Procedimiento
+
+1. Abrimos un programa de prueba en Arduino IDE.
+2. Seleccionamos la placa y el puerto COM.
+3. Pulsamos `Verify` para comprobar el código.
+4. Pulsamos `Upload` para enviar el programa a la placa.
+5. Comprobamos que la carga finaliza correctamente.
+
+### Evidencia
+
+**Captura 07 — Compilación y subida correcta del programa**
+
+*Pendiente de insertar la captura.*
+
+---
+
+**Fin de la actividad M12UF1A0.**
+
+[Volver al índice principal](../README.md)
+
+
+
 ---
 # A1
 ## Blink + Semáforo
 
 ### 1.1. Introducción
 
-En esta actividad se trabaja con las salidas digitales de la placa ESP32 para controlar el encendido y apagado de diferentes LED.
-
-La actividad se divide en tres partes:
-
-1. Capítulo 0 — Blink.
-2. Práctica 1 — LED externo.
-3. Práctica 2 — Semáforo.
-
----
-
 ## 1.2. Capítulo 0 — Blink
 
 ### Objetivo
 
-Comprender cómo funciona el parpadeo de un LED mediante programación.
-
 ### Conceptos fundamentales
 
-**`void setup()`**
-
-Es una función que se ejecuta una sola vez cuando arranca el ESP32.
-
-Se utiliza para configurar los pines y preparar el programa.
-
-**`void loop()`**
-
-Es una función que se ejecuta continuamente mientras el ESP32 está funcionando.
-
-**`pinMode()`**
-
-Permite configurar un pin como entrada o salida.
-
-**`digitalWrite()`**
-
-Permite cambiar el estado de un pin digital.
-
-- `HIGH`: nivel lógico alto.
-- `LOW`: nivel lógico bajo.
-
-**`delay(1000)`**
-
-Detiene la ejecución durante 1000 milisegundos, equivalentes a un segundo.
 
 ### Procedimiento
 
-1. Abrir el ejemplo Blink.
-2. Identificar el pin del LED utilizado.
-3. Revisar las funciones del programa.
-4. Compilar el código.
-5. Cargarlo en el ESP32.
-6. Comprobar el parpadeo.
 
 ### Evidencias
 
-Pendiente de añadir las capturas y fotografías correspondientes.
-
----
 
 ## 1.3. Práctica 1 — LED externo
 
 ### Objetivo
 
-Aprender a conectar y controlar un LED externo utilizando una protoboard, una resistencia y un pin GPIO del ESP32.
 
 ### Materiales
 
