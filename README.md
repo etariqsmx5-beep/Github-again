@@ -61,7 +61,6 @@ En cada actividad se documentarán:
 **Curso:** SMX2  
 **Módulo:** Arduino
 
-
 # 2. Investigación sobre Arduino
 
 ## 2.1. ¿Qué es Arduino?
@@ -307,8 +306,6 @@ Después de configurar el entorno, comprobamos que podemos compilar y cargar un 
 [Volver al índice principal](../README.md)
 
 
-
----
 # A1
 ## Blink + Semáforo
 
